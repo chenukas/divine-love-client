@@ -1,0 +1,52 @@
+<section id="form"><!--form-->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 col-sm-offset-1">
+  <div class="signup-form"><!--sign up form-->
+    <form #registerForm1="ngForm" (ngSubmit)="onStageOneComplete(registerForm1)" *ngIf="!Register1" novalidate>
+      <h2>New User Signup!</h2>
+      <input type="email" name="email" placeholder="Email Address" [ngClass]="{ 'is-invalid': email.errors && email.touched }" ngModel #email="ngModel" required pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"/>
+      <div [hidden]="!email.errors?.pattern" class="invalid-feedback"> Email is not valid</div>
+      <input type="password" name="password" placeholder="Password" [ngClass]="{ 'is-invalid': password.errors && password.touched }" ngModel #password="ngModel" required minlength="4"/>
+      <div [hidden]="!password.errors?.minlength" class="invalid-feedback"> Password must be at least 4 characters</div>
+      <input type="password" name="password2" placeholder="Confirm Password" [ngClass]="{ 'is-invalid': password2.errors && password2.touched }" ngModel #password2="ngModel" required minlength="4"/>
+      <div *ngIf="is-invalid" [hidden]="!password2.errors?.required" class="invalid-feedback">Password confirmation is required</div>
+      <button type="submit" class="btn btn-default">Next</button>
+    </form>
+    <form #registerForm2="ngForm" (ngSubmit)="onRegisterUser(registerForm2)" *ngIf="Register1" novalidate>
+      <h2>Continue Registration</h2>
+      <input type="text" name="cardId" placeholder="NIC" [ngClass]="{ 'is-invalid': cardId.errors && cardId.touched }" ngModel #cardId="ngModel" required minlength="9" maxlength="9" pattern="^[0-9]+$"/>
+      <div [hidden]="!cardId.errors?.minlength" class="invalid-feedback">NIC number must contain 9 digits</div>
+      <div [hidden]="!cardId.errors?.pattern" class="invalid-feedback">NIC number is invalid</div>
+      <input type="text" name="fname" placeholder="First Name" [ngClass]="{ 'is-invalid': fname.errors && fname.touched }" ngModel #fname="ngModel" required minlength="2"/>
+      <div [hidden]="!fname.errors?.minlength" class="invalid-feedback">First name must be at least 2 characters</div>
+      <input type="text" name="lname" placeholder="Last Name" [ngClass]="{ 'is-invalid': lname.errors && lname.touched }" ngModel #lname="ngModel" required minlength="2"/>
+      <div [hidden]="!lname.errors?.minlength" class="invalid-feedback">Last name must be at least 2 characters</div>
+      <input type="text" name="street" placeholder="Street Address" [ngClass]="{ 'is-invalid': street.errors && street.touched }" ngModel #street="ngModel" required minlength="2"/>
+      <div [hidden]="!street.errors?.minlength" class="invalid-feedback">Street must be at least 2 characters</div>
+      <input type="text" name="city" placeholder="City" [ngClass]="{ 'is-invalid': city.errors && city.touched }" ngModel #city="ngModel" required minlength="2"/>
+      <div [hidden]="!city.errors?.minlength" class="invalid-feedback">City must be at least 2 characters</div>
+      <button type="submit" class="btn btn-default">Signup</button>
+    </form>
+  </div><!--/sign up form-->
+</div>
+</div>
+</div>
+</section><!--/form-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
