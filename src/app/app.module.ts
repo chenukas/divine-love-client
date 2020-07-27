@@ -23,6 +23,7 @@ import { OrderFormComponent } from "./components/dashboard/sidebar/cart/order-fo
 import { FilterPipe } from "./pipes/filter.pipe";
 import { HighlightPipe } from "./pipes/highlight.pipe";
 import { ShortenPipe } from "./pipes/shorten.pipe";
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ShortenPipe } from "./pipes/shorten.pipe";
     AdminFormComponent,
     FilterPipe,
     HighlightPipe,
-    ShortenPipe
+    ShortenPipe,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

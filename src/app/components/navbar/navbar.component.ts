@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit, OnChanges {
   isLoading: boolean = true;
 
   constructor (
-    private authService: AuthService, 
+    public authService: AuthService, 
     private router: Router,
     private spinner: NgxSpinnerService
     ) {}
