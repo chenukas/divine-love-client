@@ -31,12 +31,16 @@
     "kind-of": "^6.0.3",
     "minimist": "^1.2.5",
     "ngx-spinner": "^7.2.0",
+    "node-forge": "^0.10.0",
+    "node-sass": "^4.14.1",
     "npm-registry-fetch": "^8.1.3",
     "popper.js": "^1.14.7",
     "rxjs": "~6.3.3",
     "serialize-javascript": "^4.0.0",
     "set-value": "^3.0.2",
+    "tree-kill": "^1.2.2",
     "tslib": "^1.9.0",
+    "yargs-parser": "^20.2.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
